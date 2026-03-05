@@ -1,0 +1,5 @@
+name = "broken-kubernetes-deployment-recovery"
+description = "Fix a broken Kubernetes deployment so the microservice becomes reachable."
+
+[environment.runtime]
+python = "3.12"
