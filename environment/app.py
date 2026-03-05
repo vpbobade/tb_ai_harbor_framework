@@ -1,9 +1,9 @@
-from flask import Flask, jsonify
+from fastapi import FastAPI
+from db import get_db
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route("/health")
+@app.get("/health")
 def health():
-    return jsonify({"status": "ok"})
-
-app.run(host="0.0.0.0", port=8080)
+    db = get_db()
+    return {"status": "ok"}
