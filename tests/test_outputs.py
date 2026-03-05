@@ -1,22 +1,16 @@
-
-import subprocess
 import requests
+import subprocess
 import time
 
+def test_service_runs():
 
-def test_service_health():
+    proc = subprocess.Popen(["bash","/app/start.sh"])
 
-    p = subprocess.Popen(
-        ["python", "/app/app.py"],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL
-    )
+    time.sleep(5)
 
-    time.sleep(2)
-
-    r = requests.get("http://localhost:8080/health")
+    r = requests.get("http://localhost:8000/health")
 
     assert r.status_code == 200
     assert r.json()["status"] == "ok"
 
-    p.terminate()
+    proc.kill()
