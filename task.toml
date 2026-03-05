@@ -1,5 +1,5 @@
-name = "broken-kubernetes-deployment-recovery"
-description = "Fix a broken Kubernetes deployment so the microservice becomes reachable."
+name = "broken_fastapi_service"
+description = "Fix a broken FastAPI service failing due to dependency conflicts and configuration errors."
 
 [environment.runtime]
 python = "3.12"
