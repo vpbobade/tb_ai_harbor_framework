@@ -1,26 +1,22 @@
-# Kubernetes Deployment Recovery
+A production FastAPI microservice located in /app is failing to start.
 
-A microservice application has been deployed to a Kubernetes cluster but is currently not reachable.
+Your goal is to fix the service so that it runs correctly and exposes the expected API.
 
-Your task is to investigate the environment and fix the deployment so the service becomes accessible.
-
-The repository contains:
-- a simple Python microservice
-- Kubernetes deployment manifests
-- service configuration
-
-The deployment is currently misconfigured.
-
-You may modify any files under `/app/`.
-
-Once fixed, the application should start successfully and respond to HTTP requests.
+You may inspect logs, modify files, install packages, and run commands.
 
 Expected behavior:
-The service should respond successfully when accessed locally.
+1. The service should start successfully.
+2. The endpoint GET /health should return {"status": "ok"}.
+3. The service should connect successfully to the SQLite database.
 
 Constraints:
-- Work only within the `/app` directory.
-- Do not modify the test files.
+- Do not remove functionality.
+- Only modify files inside /app if necessary.
+- Ensure the service runs successfully.
 
-Goal:
-Ensure the microservice runs correctly and the health endpoint returns a successful response.
+Helpful commands you may use:
+- python app.py
+- pip install -r requirements.txt
+- bash start.sh
+
+Files are located in /app.
