@@ -2,13 +2,8 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    docker.io \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY * /app/
 
-RUN pip install -r requirements.txt
+RUN pip install fastapi==0.95.0 uvicorn==0.22.0 sqlalchemy==2.0.0
 
-CMD ["bash"]
+CMD ["bash","start.sh"]
