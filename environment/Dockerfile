@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY * /app/
 
-RUN pip install fastapi==0.95.0 uvicorn==0.22.0 sqlalchemy==2.0.0
+RUN pip install -r requirements.txt
 
 CMD ["bash","start.sh"]

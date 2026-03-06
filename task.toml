@@ -5,4 +5,7 @@ description = "Fix a broken FastAPI service that fails to start due to dependenc
 python = "3.12"
 
 [solution]
-path = "solution/solve.sh"
+entrypoint = "bash solution/solve.sh"
+
+[test]
+entrypoint = "bash tests/test.sh"
