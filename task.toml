@@ -1,5 +1,8 @@
 name = "broken_fastapi_service"
-description = "Fix a broken FastAPI service failing due to dependency conflicts and configuration errors."
+description = "Fix a broken FastAPI service that fails to start due to dependency and startup issues."
 
 [environment.runtime]
 python = "3.12"
+
+[solution]
+path = "solution/solve.sh"
